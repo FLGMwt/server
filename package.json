@@ -23,9 +23,8 @@
   "scripts": {
     "lint": "eslint .",
     "dev": "rollup -c -w",
-    "build": "rollup -c",
+    "build": "patch-package && rollup -c",
     "prepublishOnly": "yarn run build",
-    "postinstall": "patch-package",
     "test:run": "jest",
     "test": "run-s build test:run",
     "ci": "run-s lint test"
